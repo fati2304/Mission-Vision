@@ -1,0 +1,97 @@
+<style>
+  .section-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .role-flip-card {
+    width: 320px;
+    height: 220px;
+    perspective: 1000px;
+  }
+
+  .role-flip-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+
+  .role-flip-card:hover .role-flip-inner {
+    transform: rotateY(180deg);
+  }
+
+  .role-front, .role-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    backface-visibility: hidden;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .role-front {
+    background: #0077b6;
+    color: #fff;
+    text-align: center;
+  }
+
+  .role-front h3 {
+    margin: 0;
+    font-size: 1.4rem;
+  }
+
+  .role-front i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  .role-back {
+    background: #f1f1f1;
+    color: #333;
+    transform: rotateY(180deg);
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+</style>
+
+<div class="section-container">
+
+  <!-- Mission Card -->
+  <div class="role-flip-card">
+    <div class="role-flip-inner">
+      <div class="role-front">
+        <i>🚀</i>
+        <h3>Our Mission</h3>
+        <p>Hover to view details</p>
+      </div>
+      <div class="role-back">
+        Our mission is to ensure accurate and timely payments to our supply partners by leveraging robust reconciliation and payment processes that mitigate risk and safeguard revenue. We enable growth through innovation and continuous improvement.
+      </div>
+    </div>
+  </div>
+
+  <!-- Vision Card -->
+  <div class="role-flip-card">
+    <div class="role-flip-inner">
+      <div class="role-front">
+        <i>🌟</i>
+        <h3>Our Vision</h3>
+        <p>Hover to view details</p>
+      </div>
+      <div class="role-back">
+        Our vision is to transform finance operations into an industry-leading business partner that excels in flawless payments, risk mitigation, and innovation—unlocking limitless growth and building stakeholder trust.
+      </div>
+    </div>
+  </div>
+
+</div>
